@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { useSelector } from 'react-redux';
 // import { useContext } from 'react';
 
 import MealsList from '../components/MealsList/MealsList';
@@ -12,6 +13,7 @@ function FavoritesScreen() {
   const favoriteMeals = MEALS.filter((meal) =>
     favoriteMealIds.includes(meal.id)
   );
+
 
   if (favoriteMeals.length === 0) {
     return (
